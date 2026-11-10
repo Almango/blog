@@ -1,0 +1,129 @@
+// 友链数据定义
+export interface Link {
+  name: string;
+  description: string;
+  url: string;
+  avatar: string;
+  rss?: string;
+}
+export const links: Link[] = [
+  {
+    name: "张洪Heo",
+    description: "分享设计与科技生活",
+    url: "https://blog.zhheo.com/",
+    avatar: "https://img.zhheo.com/i/67d8fa75943e4.webp",
+    rss: "https://blog.zhheo.com/atom.xml"
+  },
+  {
+    name: "定の栈",
+    description: "LINK START!",
+    url: "https://blog.saop.cc/",
+    avatar: "https://saop.cc/avatar.webp",
+    rss: "https://blog.saop.cc/atom.xml"
+  },
+  {
+    name: "栖童の小站",
+    description: "越努力，越幸运.",
+    url: "https://blog.linux-qitong.top/",
+    avatar: "https://blog.linux-qitong.top/img/avatar.webp",
+    rss: "https://blog.linux-qitong.top/atom.xml"
+  },
+    {
+    name: "Saneko",
+    description: "Do the things that I like.",
+    url: "https://saneko.me",
+    avatar: "https://cdn.blog.saneko.me/Web/Avatar.png",
+    rss: "https://saneko.me/rss.xml"
+  },
+  {
+    name: "鈴奈咲桜",
+    description: "愛することを忘れないで",
+    url: "https://blog.sakura.ink",
+    avatar: "https://q2.qlogo.cn/headimg_dl?dst_uin=2731443459&spec=5",
+    rss: "https://blog.sakura.ink/rss.xml"
+  },
+  {
+    name: "微尘印记",
+    description: "愿如微尘，亦有印记。",
+    url: "https://weichen.ink",
+    avatar: "https://weichen.ink/avatar.jpg",
+    rss: "https://weichen.ink/rss.xml"
+  },
+  {
+    name: "JustPureH2O",
+    description: "穷方圆平直之情，尽规矩准绳之用。",
+    url: "https://justpureh2o.cn",
+    avatar: "https://img.justpureh2o.cn/image/667f85b1d9c307b7e9ef9f2c.jpg",
+    rss: "https://justpureh2o.cn/rss.xml"
+  },
+  {
+    name: "bbb-lsy07",
+    description: "科技激荡人文，洞见智慧本真。",
+    url: "https://blog.tsoo.net/",
+    avatar: "https://blog.tsoo.net/upload/logo.jpg?width=800",
+    rss: "https://blog.tsoo.net/rss.xml"
+  },
+  {
+    name: "小林の木屋",
+    description: "一个黑客小子！",
+    url: "https://www.wjlin0.com",
+    avatar: "https://www.wjlin0.com/upload/log.png",
+    rss: "https://www.wjlin0.com/rss.xml"
+  },
+  {
+    name: "mccsjs",
+    description: "素敵な一日が始まります🎉🎉🎉",
+    url: "https://mccsjs.cn/",
+    avatar: "https://mccsjs.cn/_astro/ico.DgJiMYbf_1BrGmp.webp",
+    rss: "https://mccsjs.cn/rss.xml"
+  },
+  {
+    name: "qwwp",
+    description: "你要吃C4吗？",
+    url: "https://qwwp.top/",
+    avatar: "https://qwwp.top/images/avatar.jpg",
+    rss: "https://qwwp.top/feed.xml"
+  },
+  {
+    name: "Meorion",
+    description: "去码头整点薯条🍟",
+    url: "https://blog.meorion.moe",
+    avatar: "https://gravatar.meorion.moe/avatar/me",
+    rss: "https://blog.meorion.moe/rss.xml"
+  },
+  {
+    name: "Kegongtang",
+    description: "Blogger / Technophile / Student",
+    url: "https://kegongteng.cn/",
+    avatar: "https://weavatar.com/avatar/0b01396273cca253aa6876c020449b655a9cc12e75f921b38ac088569e814b5e",
+    rss: "https://kegongteng.cn/atom",
+  },
+  {
+    name: "AirTouch",
+    description: "Stay Hungry, Stay Foolish",
+    url: "https://www.xsl.im/",
+    avatar: "https://www.xsl.im/avatar.webp",
+    rss: "https://www.xsl.im/atom.xml"
+  },
+  {
+    name: "天码行空的小破站",
+    description: "路漫漫其修远兮，吾将上下而求索",
+    url: "https://cosky.top/",
+    avatar: "https://i.see.you/2026/04/06/mW3p/e687dcf361b90e15258af06410e4df9e.jpg",
+    rss: "https://cosky.top/rss"
+  },
+  {
+    name: "洪畅的博客",
+    description: "想，全是问题；做，才有答案。",
+    url: "https://blog.hcbu.cn/",
+    avatar: "https://gitee.com/hcbug/picture1/raw/master/20260607223324364.webp",
+    rss: "https://blog.hcbu.cn/atom.xml"
+  },
+  {
+    name: "合荒小站",
+    description: "万物合鸣·独守一荒",
+    url: "https://hehuang.site",
+    avatar: "https://hehuang.site/img/avatar.jpg",
+    rss: "https://hehuang.site/index.xml"
+  }
+];
