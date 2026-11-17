@@ -28,7 +28,7 @@ export const HEADER_CONFIG = {
     { label: '归档', href: '/archive' },
     { label: '分类', href: '/category' },
     { label: '书影', href: '/watched' },
-    { label: '朋友', href: '/link' },
+    { label: '邻居', href: '/link' },
     { label: '关于', href: '/about' },
   ],
 }
