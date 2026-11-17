@@ -26,7 +26,8 @@ export const POST_CONFIG = {
 export const HEADER_CONFIG = {
   nav: [
     { label: '归档', href: '/archive' },
-    { label: '探索', href: '/explore' },
+    { label: '分类', href: '/category' },
+    { label: '书影', href: '/watched' },
     { label: '朋友', href: '/link' },
     { label: '关于', href: '/about' },
   ],
@@ -47,3 +48,4 @@ export const COMMENT_CONFIG = {
     serverURL: 'https://waline.almango.cn/',
   },
 }
+

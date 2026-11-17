@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro'
+import PageHeader from '../components/PageHeader.astro'
+import watched from '../data/watched.json'
+
+const title = '书影'
+const sections = [
+  { label: '电影', type: 'movie' },
+  { label: '书籍', type: 'book' },
+].map(section => ({
+  ...section,
+  items: watched.filter(item => item.type === section.type),
+}))
+---
+
+<Layout title={title}>
+  <PageHeader title={title} subtitle="看过的电影，读过的书" />
+  <div class="media">
+    {sections.map(section => (
+      <section class="watched-section">
+        <h2 class="watched-section-title">{section.label}</h2>
+        {section.items.length === 0
+          ? <p class="watched-empty">还没有记录</p>
+          : (
+            <div class="watched-grid">
+              {section.items.map(item => (
+                <div class="watched-card">
+                  <div class="watched-cover">
+                    <img src={item.cover} alt={item.title} loading="lazy" referrerpolicy="no-referrer" draggable="false" />
+                    <span class="watched-cover-fallback">{item.title}</span>
+                  </div>
+                  <h3 class="watched-name">{item.title}</h3>
+                </div>
+              ))}
+            </div>
+          )}
+      </section>
+    ))}
+  </div>
+</Layout>
+
+
+<style>
+  .media {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .watched-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .watched-section-title {
+    /* 章节标题：宽字距，模仿书页的排版节奏 */
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0;
+    font-size: var(--text-subtitle-fontsize);
+    font-weight: var(--text-weight);
+    letter-spacing: 0.2em;
+    color: var(--text-subtitle-color);
+  }
+
+  .watched-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--watched-columns), minmax(0, 1fr));
+    gap: 16px;
+    --watched-columns: 5;
+  }
+
+  .watched-card {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .watched-cover {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    background: var(--bg-sunken);
+    outline: 1px solid var(--line-border-color);
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  .watched-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .watched-cover-fallback {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    text-align: center;
+    font-size: var(--text-description-fontsize);
+    color: var(--text-faint-color);
+  }
+
+  .watched-cover.is-failed img {
+    display: none;
+  }
+
+  .watched-cover.is-failed .watched-cover-fallback {
+    display: flex;
+  }
+
+  .watched-name {
+    /* 名称一直显示在封面下方 */
+    margin: 0;
+    font-size: var(--text-description-fontsize);
+    font-weight: normal;
+    color: var(--text-description-color);
+    line-height: 1.5;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .watched-empty {
+    margin: 0;
+    padding: 1rem 0;
+    font-size: var(--text-description-fontsize);
+    color: var(--text-faint-color);
+  }
+  
+</style>
+
