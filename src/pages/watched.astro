@@ -127,7 +127,6 @@ const sections = [
   }
 
   .watched-name {
-    /* 名称一直显示在封面下方 */
     margin: 0;
     font-size: var(--text-description-fontsize);
     font-weight: normal;
@@ -145,5 +144,22 @@ const sections = [
     color: var(--text-faint-color);
   }
   
+  @media (max-width: 600px) {
+    .watched-grid {
+      --watched-columns: 4;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .watched-grid {
+      --watched-columns: 3;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .watched-grid {
+      --watched-columns: 2;
+    }
+  }
 </style>
 
