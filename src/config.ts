@@ -37,6 +37,7 @@ export const HEADER_CONFIG = {
 export const FOOTER_CONFIG = {
   link: [
     { name: 'Astro', url: 'https://astro.build/'},
+    { name: '萌ICP备20240146号', url: 'https://icp.gov.moe/?keyword=20240146'},
   ]
 }
 
